@@ -1,17 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-
 typedef vector<int> vi;
-typedef vector<long long> vll;
 typedef vector<char> vc;
-typedef vector<string> vs;
-
 #define PB push_back
-#define MP make_pair
-
 #define FOR(i,a,b)  for(int i=a;i<b;i++)
 
+ll ans[1000]={0};
+
+ll fibo(int a) {
+  if(ans[a]) return ans[a];
+  if(a==1 or a==2) return ans[a]=1;
+  return ans[a]=fibo(a-1) + fibo(a-2);
+}
 
 
 int main()
@@ -21,9 +22,8 @@ int main()
   freopen("output.txt","w",stdout);
 #endif
 
+cout<<fibo(1000);
 
-ll n; cin >> n;
-cout<<n;
 
 }
 

@@ -21,9 +21,12 @@ int main()
   freopen("output.txt","w",stdout);
 #endif
 
+ll t; cin >> t;
+while(t--) {
 
-ll n; cin >> n;
-cout<<n;
+}
+
+
 
 }
 
