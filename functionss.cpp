@@ -10,10 +10,14 @@ __builtin_popcount(x)
 
 n << 2 //  n*=2^i left shiftin   ---- pow(2,i)
 
+bool b =  binary_search(a,a+10,20);
+bool b =  binary_search(a,a+10,20,,greater<int> ());
 
+auto it = lower_bound(a,a + 3,3); // equal or greater
 
+cout<<distance(a,it2); //distance btw a and it2 
 
-
+priority_queue<int, vector<int>, greater<int> > pq;
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 
