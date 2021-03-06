@@ -58,7 +58,10 @@ int main()
 #endif
 
 
-
+ll t; cin >> t; 
+while(t--) {
+    
+}
 
 
 

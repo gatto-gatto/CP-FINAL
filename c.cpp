@@ -10,9 +10,56 @@ typedef vector<string> vs;
 #define PB push_back
 #define MP make_pair
 
-#define FOR(i,a,b)  for(int i=a;i<b;i++)
+#define FOR(i,a,b)  for(long long i=a;i<b;i++)
 
 
+#define endl "\n"
+
+/////////////////////////////////////////////////////////////////////////////
+// global var
+vector<int> adj[1000];
+bool visited[10000]={false};
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+long long binpow(long long a, long long b) {
+    long long res = 1;
+    while (b > 0) {
+        if (b & 1)
+            res = res * a;
+        a = a * a;
+        b >>= 1;
+    }
+    return res;
+}
+
+/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+void dfs(int v) {
+    visited[v] = true;
+    for (int u : adj[v]) {
+        if (!visited[u])
+            dfs(u);
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+void solve() {
+
+
+
+
+    
+}
 
 int main()
 {
@@ -21,11 +68,12 @@ int main()
   freopen("output.txt","w",stdout);
 #endif
 
-ll t; cin >> t;
-while(t--) {
-
-}
-
+set<int> s;
+s.insert(1);
+s.insert(2);
+s.insert(3);
+auto it=s.end();
+cout<<*(----it);
 
 
 }

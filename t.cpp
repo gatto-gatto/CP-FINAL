@@ -15,6 +15,19 @@ typedef vector<string> vs;
 
 #define endl "\n"
 
+//--------------------------------------------------//
+/* set  erase  have to use pointer
+insert only value
+
+
+
+
+
+
+*/
+
+
+
 /////////////////////////////////////////////////////////////////////////////
 // global var
 vector<int> adj[1000];
@@ -68,35 +81,13 @@ int main()
   freopen("output.txt","w",stdout);
 #endif
 
-vector<int> drivers={20,100};
-vector<int> batteries={60,10,40,80};
-ll p=50;
 
-set<int> s;
-
-for(auto x:batteries) {
-    s.insert(x);
+ll t; cin >> t; 
+while(t--) {
+    solve();
 }
 
 
-ll ans=0;
-
-
-for(int i=0;i<drivers.size()-1;i++) {
-    if(drivers[i]>=p) {
-        auto it=s.end();
-        it--;
-        ans+=abs(*it-drivers[i])+abs(*it - p);
-        s.erase(it);
-    }
-    else {
-        auto it=s.begin();
-        ans+=abs(*it-drivers[i])+abs(*it - p);
-        s.erase(it);
-    }
-}
-
-cout<<ans;
 
 
 

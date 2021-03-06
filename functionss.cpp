@@ -18,6 +18,13 @@ auto it = lower_bound(a,a + 3,3); // equal or greater
 cout<<distance(a,it2); //distance btw a and it2 
 
 priority_queue<int, vector<int>, greater<int> > pq;
+
+ceil() 2.3 == 3
+
+2*asin(1.0) == pi
+
+reverse(a,a+5);
+
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 

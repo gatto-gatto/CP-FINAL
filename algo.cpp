@@ -15,6 +15,28 @@ for (int i = 2; i <= n; i++) {
 ---------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------no of bits in a given number 
 
+---------------bfs--------------
+
+
+visited[x] = true;
+distance[x] = 0;
+q.push(x);
+while (!q.empty()) {
+int s = q.front(); q.pop();
+// process node s
+for (auto u : adj[s]) {
+if (visited[u]) continue;
+visited[u] = true;
+distance[u] = distance[s]+1;
+q.push(u);
+}
+}
+
+---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------no of bits in a given number 
+
+
+
 No of bits in n
 
 int cnt=0;

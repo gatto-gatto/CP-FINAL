@@ -10,7 +10,10 @@ typedef vector<string> vs;
 #define PB push_back
 #define MP make_pair
 
-#define FOR(i,a,b)  for(int i=a;i<b;i++)
+#define FOR(i,a,b)  for(long long i=a;i<b;i++)
+
+
+#define endl "\n"
 
 /////////////////////////////////////////////////////////////////////////////
 // global var
@@ -50,18 +53,36 @@ void dfs(int v) {
 ////////////////////////////////////////////////////////////////////////
 
 
+
+
+int dp[1000][1000]={0};
+
+int knapSack(int w, int wt[], int val[], int n)
+{
+	if(dp[w][n]) return dp[w][n];
+    if (n == 0 || w == 0)
+        return 0;
+ 
+    if (wt[n - 1] > w)
+        return dp[w][n]=knapSack(w, wt, val, n - 1);
+    else
+        return dp[w][n]=max(
+            val[n - 1]
+                + knapSack(w - wt[n - 1], 
+                           wt, val, n - 1),
+            knapSack(w, wt, val, n - 1));
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
   freopen("input.txt","r",stdin);
   freopen("output.txt","w",stdout);
 #endif
-
-
-
-
-
-
+int val[] = { 60, 100, 120 };
+    int wt[] = { 10, 20, 30 };
+    int W = 50;
+    int n = sizeof(val) / sizeof(val[0]);
+    printf("%d", knapSack(W, wt, val, n));
 
 }
 
