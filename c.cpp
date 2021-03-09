@@ -15,6 +15,31 @@ typedef vector<string> vs;
 
 #define endl "\n"
 
+//--------------------------------------------------//
+/*
+stl 
+
+set<int> s (batteries.begin(),batteries.end());
+priority_queue<int, vector<int>, greater<int> > pq; // minQ
+
+
+*/
+
+// lower_bound upper_bound
+
+/* set 
+erase  have to use pointer
+insert only value
+
+
+
+
+
+
+*/
+
+
+
 /////////////////////////////////////////////////////////////////////////////
 // global var
 vector<int> adj[1000];
@@ -68,12 +93,14 @@ int main()
   freopen("output.txt","w",stdout);
 #endif
 
-set<int> s;
-s.insert(1);
-s.insert(2);
-s.insert(3);
-auto it=s.end();
-cout<<*(----it);
+
+ll t; cin >> t; 
+while(t--) {
+    solve();
+}
+
+
+
 
 
 }

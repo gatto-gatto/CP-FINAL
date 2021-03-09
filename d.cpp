@@ -15,6 +15,31 @@ typedef vector<string> vs;
 
 #define endl "\n"
 
+//--------------------------------------------------//
+/*
+stl 
+
+set<int> s (batteries.begin(),batteries.end());
+priority_queue<int, vector<int>, greater<int> > pq; // minQ
+
+
+*/
+
+// lower_bound upper_bound
+
+/* set 
+erase  have to use pointer
+insert only value
+
+
+
+
+
+
+*/
+
+
+
 /////////////////////////////////////////////////////////////////////////////
 // global var
 vector<int> adj[1000];
@@ -73,6 +98,7 @@ ll t; cin >> t;
 while(t--) {
     solve();
 }
+
 
 
 

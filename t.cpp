@@ -15,16 +15,6 @@ typedef vector<string> vs;
 
 #define endl "\n"
 
-//--------------------------------------------------//
-/* set  erase  have to use pointer
-insert only value
-
-
-
-
-
-
-*/
 
 
 
@@ -95,3 +85,81 @@ while(t--) {
 
 
 
+
+
+
+
+
+
+// NOTE IMP
+
+
+
+
+
+
+
+//--------------------------------------------------//
+/*
+stl 
+
+set<int> s (batteries.begin(),batteries.end());
+priority_queue<int, vector<int>, greater<int> > pq; // minQ
+
+
+*/
+
+// lower_bound upper_bound
+
+//----------------------------SET--------------------------------//
+/*
+erase  key and auto both are valid 
+insert only value
+clear()
+find == gives us the auto if that not present then we get end
+count()
+empty()
+*/
+
+//------------------------unordered_set--------------------------//
+/*
+empty()
+size()
+find()
+erase()
+find()
+clear()
+
+*/
+
+
+//------------------------multiset--------------------------//
+/*
+empty()
+size()
+find()
+erase()  erase all the element with that particular val
+count()  no of element in multiset
+clear()
+
+*/
+
+//------------------------vector--------------------------//
+/*
+erase() using iterator
+insert() using iterator
+size()
+push_back()
+pop_back()
+front()
+reserve 
+flip
+*/
+
+//------------------------map--------------------------//
+/*
+
+
+
+
+*/

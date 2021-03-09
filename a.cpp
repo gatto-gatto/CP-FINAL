@@ -15,6 +15,9 @@ typedef vector<string> vs;
 
 #define endl "\n"
 
+
+
+
 /////////////////////////////////////////////////////////////////////////////
 // global var
 vector<int> adj[1000];
@@ -68,39 +71,77 @@ int main()
   freopen("output.txt","w",stdout);
 #endif
 
-vector<int> drivers={20,100};
-vector<int> batteries={60,10,40,80};
-ll p=50;
+vector<int> v ;
+v.reserve(200);
+v.push_back(1);
+v.push_back(2);
+v.push_back(3);
 
-set<int> s;
-
-for(auto x:batteries) {
-    s.insert(x);
-}
+auto it=v.begin();
 
 
-ll ans=0;
-
-
-for(int i=0;i<drivers.size()-1;i++) {
-    if(drivers[i]>=p) {
-        auto it=s.end();
-        it--;
-        ans+=abs(*it-drivers[i])+abs(*it - p);
-        s.erase(it);
-    }
-    else {
-        auto it=s.begin();
-        ans+=abs(*it-drivers[i])+abs(*it - p);
-        s.erase(it);
-    }
-}
-
-cout<<ans;
-
+cout<<v.front();
 
 
 }
 
 
 
+
+
+
+
+
+
+// NOTE IMP
+
+
+
+
+
+
+
+//--------------------------------------------------//
+/*
+stl 
+
+set<int> s (batteries.begin(),batteries.end());
+priority_queue<int, vector<int>, greater<int> > pq; // minQ
+
+
+*/
+
+// lower_bound upper_bound
+
+//----------------------------SET--------------------------------//
+/*
+erase  key and auto both are valid 
+insert only value
+clear()
+find == gives us the auto if that not present then we get end
+count()
+empty()
+*/
+
+//------------------------unordered_set--------------------------//
+/*
+empty()
+size()
+find()
+erase()
+find()
+clear()
+
+*/
+
+
+//------------------------multiset--------------------------//
+/*
+empty()
+size()
+find()
+erase()  erase all the element with that particular val
+find() 
+clear()
+
+*/

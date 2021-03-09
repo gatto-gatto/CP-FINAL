@@ -1,13 +1,9 @@
-class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int ans=-9999999;
-        int best=-999999;
-        for(int x:nums) {
-            best=best+x;
-            best=max(best,x);
-        	ans=max(ans,best);
+ if(count<=freq[input[i]])
+        {
+        	if(count==freq[input[i]] )  {
+        		output=min(output,input[i]);
+        	} else {
+            count = freq[input[i]];
+            output = input[i];
         }
-        return ans;
-    }
-};
+        }

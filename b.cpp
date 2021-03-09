@@ -15,6 +15,31 @@ typedef vector<string> vs;
 
 #define endl "\n"
 
+//--------------------------------------------------//
+/*
+stl 
+
+set<int> s (batteries.begin(),batteries.end());
+priority_queue<int, vector<int>, greater<int> > pq; // minQ
+
+
+*/
+
+// lower_bound upper_bound
+
+/* set 
+erase  have to use pointer
+insert only value
+
+
+
+
+
+
+*/
+
+
+
 /////////////////////////////////////////////////////////////////////////////
 // global var
 vector<int> adj[1000];
@@ -53,37 +78,26 @@ void dfs(int v) {
 ////////////////////////////////////////////////////////////////////////
 
 
+void solve() {
 
 
-int dp[1000][1000]={0};
 
-int knapSack(int w, int wt[], int val[], int n)
-{
-	if(dp[w][n]) return dp[w][n];
-    if (n == 0 || w == 0)
-        return 0;
- 
-    if (wt[n - 1] > w)
-        return dp[w][n]=knapSack(w, wt, val, n - 1);
-    else
-        return dp[w][n]=max(
-            val[n - 1]
-                + knapSack(w - wt[n - 1], 
-                           wt, val, n - 1),
-            knapSack(w, wt, val, n - 1));
+
+    
 }
+
 int main()
 {
 #ifndef ONLINE_JUDGE
   freopen("input.txt","r",stdin);
   freopen("output.txt","w",stdout);
 #endif
-int val[] = { 60, 100, 120 };
-    int wt[] = { 10, 20, 30 };
-    int W = 50;
-    int n = sizeof(val) / sizeof(val[0]);
-    printf("%d", knapSack(W, wt, val, n));
 
+
+
+char a='a';
+char b='b';
+cout<<min(a,b);
 }
 
 
