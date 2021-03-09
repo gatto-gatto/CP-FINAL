@@ -151,15 +151,45 @@ insert() using iterator
 size()
 push_back()
 pop_back()
-front()
+front() // first element
+back() // last element
 reserve 
 flip
 */
 
 //------------------------map--------------------------//
 /*
+count()
+erase()
+size()
 
 
 
+*/
+
+//------------------------unordered_map--------------------------//
+/*
+same as map but its dont store in sorted order hence its faster then map
+
+
+*/
+
+
+//------------------------multimap--------------------------//
+/*
+two key can be identical in this
+
+
+*/
+
+
+
+//------------------------priority_queue--------------------------//
+/*
+priority_queue<int, vector<int>, greater<int> > pq; // min heap
+pop()
+top()
+empty()
+size()
 
 */
